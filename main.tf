@@ -1,8 +1,8 @@
-data "aws_ami" "ami" {
+data "aws_ami" "this" {
   most_recent = true
   owners      = ["${var.owners}"]
 
-  name_regex = "${var.ami_name}"
+  name_regex = "${var.name}"
 
   filter {
     name   = "root-device-type"
@@ -11,6 +11,6 @@ data "aws_ami" "ami" {
 
   filter {
     name   = "virtualization-type"
-    values = ["${var.virt_type}"]
+    values = ["${var.virtualization_type}"]
   }
 }

@@ -1,7 +1,6 @@
-variable "ami_name" {
+variable "name" {
   description = "Limit search to specific starting AMI name string"
-  type        = "string"
-  default     = "ubuntu-xenial-16.04-amd64-server"
+  default     = "ubuntu-bionic-18.04-amd64-server"
 }
 
 variable "owners" {
@@ -12,12 +11,10 @@ variable "owners" {
 
 variable "root_device_type" {
   description = "The type of root device (ie: ebs or instance-store)."
-  type        = "string"
   default     = "ebs"
 }
 
-variable "virt_type" {
+variable "virtualization_type" {
   description = "The type of virtualization of the AMI (ie: hvm or paravirtual)."
-  type        = "string"
   default     = "hvm"
 }

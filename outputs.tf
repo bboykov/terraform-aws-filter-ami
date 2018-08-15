@@ -1,3 +1,4 @@
 output "id" {
-  value = "${data.aws_ami.ami.id}"
+  description = "The ID of the found AMI"
+  value       = "${data.aws_ami.this.id}"
 }
